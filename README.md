@@ -19,8 +19,8 @@ yep, wtf!
 
 # attention
 
-DO NOT USE THIS
-I'm serious. This whole thing is experimental. It doesn't even respect mathematic rules.
+DO NOT USE THIS FOR ANYTHING EXCEPT FOR FUN
+I'm serious. This whole thing is experimental. It doesn't even respect basic mathematic rules.
 
 # syntax
 
