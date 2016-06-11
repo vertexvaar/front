@@ -2,6 +2,10 @@
 
 "front" is a interpreter based on PHP
 
+# usage
+
+clone this repo and run "./front" on your command line
+
 # what is this for
 
 in short: nothing
