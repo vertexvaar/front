@@ -1,0 +1,22 @@
+#!/usr/bin/env php
+<?php
+
+foreach (glob(__DIR__ . '/src/*.php') as $file) {
+    require($file);
+}
+
+function printLine($text)
+{
+    echo $text . PHP_EOL;
+}
+
+printLine('Front Versoin 0.0.0');
+printLine('Yep, it is not a version, yet :D');
+printLine('Copyright Oliver Eglseder <contact@vxvr.de>');
+printLine('');
+printLine('Enter nothing to exit');
+
+if ($argc < 2) {
+    $interactive = new Interactive();
+    $interactive->run();
+}
