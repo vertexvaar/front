@@ -82,14 +82,29 @@ class Tree extends Token
 
     protected function add(Token $left, Token $right)
     {
-        if ($left->getType() !== $right->getType()) {
-            throw new \Exception('can not add type ' . $left->getType() . ' to type ' . $right->getType());
+        $leftType = $left->getType();
+        $rightType = $right->getType();
+
+        if ($leftType === Token::STRING && $rightType === Token::INTEGER) {
+            $value = $right->getValue();
+
+            $right = new Token();
+            $right->setType($leftType);
+            $right->setValue($value);
+        } elseif ($leftType === Token::INTEGER && $rightType === Token::STRING) {
+            $value = $left->getValue();
+
+            $left = new Token();
+            $left->setType($rightType);
+            $left->setValue($value);
+        } elseif ($leftType !== $rightType) {
+            throw new \Exception('can not add type ' . $leftType . ' to type ' . $rightType);
         }
 
         $token = new Token();
-        $token->setType($left->getType());
+        $token->setType($leftType);
 
-        switch ($left->getType()) {
+        switch ($leftType) {
             case Token::STRING:
                 $token->setValue($left->getValue() . $right->getValue());
                 break;
