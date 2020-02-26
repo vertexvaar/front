@@ -1,22 +1,20 @@
 #!/usr/bin/env php
 <?php
 
-foreach (glob(__DIR__ . '/src/*.php') as $file) {
-    require($file);
+if ('cli' !== php_sapi_name()) {
+    printf("Error: This script must be run on CLI only\n");
+    exit(1);
 }
 
-function printLine($text)
-{
-    echo $text . PHP_EOL;
+if (!file_exists(__DIR__ . '/vendor/autoload.php')) {
+    printf("Error: composer autoload missing\n");
+    printf("Please run \"ctrl.sh install\" before running this application\n");
+    exit(1);
 }
 
-printLine('Front Versoin 0.0.0');
-printLine('Yep, it is not a version, yet :D');
-printLine('Copyright Oliver Eglseder <contact@vxvr.de>');
-printLine('');
-printLine('Enter nothing to exit');
+require(__DIR__ . '/vendor/autoload.php');
 
-if ($argc < 2) {
-    $interactive = new Interactive();
-    $interactive->run();
-}
+$application = new \Symfony\Component\Console\Application();
+$application->add(new \VerteXVaaR\Front\Command\FrontCommand());
+$application->setDefaultCommand(\VerteXVaaR\Front\Command\FrontCommand::getDefaultName());
+$application->run();

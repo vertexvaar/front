@@ -43,3 +43,16 @@ Examples:
 ## Alternative branches
 
 The branch `functional` contains a different approach to tokenizing/parsing based on the youtube video "function parsing" by computerphile: https://www.youtube.com/watch?v=dDtZLm7HIJs
+
+### Functional
+
+The functional attempt in its current state takes the input and tries to apply expressions which are sequences on the input.
+This is not yet very flexible since it can not detect repeated operators.
+
+Inputs working: (numbers and operators are exchangeable)
+* 321+123
+* (1*1)
+
+Inputs not working:
+* 1+1+1
+* (1+1)+1
