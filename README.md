@@ -39,3 +39,7 @@ Examples:
 * `2 * ( 4 + 1 )`
 * `2 * 4 + 1`
 * `2 + 4 * 3` (ATTENTION: This should return 16 but returns 18 because it is calculated left to right, not point before line)
+
+## Alternative branches
+
+The branch `functional` contains a different approach to tokenizing/parsing based on the youtube video "function parsing" by computerphile: https://www.youtube.com/watch?v=dDtZLm7HIJs
