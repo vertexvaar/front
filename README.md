@@ -1,39 +1,41 @@
-# about front
+# About `front`
 
-"front" is a interpreter based on PHP
+`front` is an experimental interpreter built with PHP.
+This interpreter will take your input, tokenize it, built an AST and execute the AST.
+It is a package built to experiment with the concept of parser and interpreted languages. 
 
-# usage
+## ATTENTION / DISCLAIMER
 
-clone this repo and run "./front" on your command line
+DO NOT USE THIS PACKAGE IN PRODUCTION!
 
-# what is this for
+USE ONLY FOR EDUCATIONAL PURPOSES!
 
-in short: nothing
+I'm serious. This whole thing is experimental. It doesn't even respect basic mathematical rules.
 
-this is a experimental interpreter. it takes your input, tokenizes it and returns the result.
+## Usage
 
-# what is speacial about it
+1. `git clone git@github.com:vertexvaar/front.git`
+1. `cd front`
+1. `./front`
+1. Type in some calculations.
 
-you can use arithmetic operations on string.
-yep, wtf!
+## What is special about this kind of interpreter?
 
-# attention
+The interpreter will try to make sense out of every operation given to it.
+Even mathematical operations on strings.
 
-DO NOT USE THIS FOR ANYTHING EXCEPT FOR FUN
-I'm serious. This whole thing is experimental. It doesn't even respect basic mathematic rules.
+## Syntax
 
-# syntax
+Each parameter is delimited by whitespace.
 
-each parameter is delimited by whitespace.
+Examples:
 
-examples:
-
-* 1 + 1
-* 53628749 * 7453
-* 7 / 5
-* foo + bar
-* abc * fff
-* 1 + ( 7 * 2 )
-* 2 * ( 4 + 1 )
-* 2 * 4 + 1
-* 2 + 4 * 3 (ATTENTION: This should return 16 but returns 18 because it is calculated left to right, not point before line)
+* `1 + 1`
+* `53628749 * 7453`
+* `7 / 5`
+* `foo + bar`
+* `abc * fff`
+* `1 + ( 7 * 2 )`
+* `2 * ( 4 + 1 )`
+* `2 * 4 + 1`
+* `2 + 4 * 3` (ATTENTION: This should return 16 but returns 18 because it is calculated left to right, not point before line)
