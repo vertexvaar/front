@@ -16,7 +16,7 @@ Available actions:
 }
 install()
 {
-  docker run --rm -v$(pwd):/app -w /app in2code/php-dev:7.4-fpm composer install
+  docker run --rm -v $(pwd):/app -v $HOME/.composer/auth.json:/tmp/composer/auth.json -v $HOME/.composer/cache/:/tmp/composer/cache/ -w /app in2code/php-dev:7.4-fpm composer install
 }
 run()
 {

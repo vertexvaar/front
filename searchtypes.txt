@@ -1,0 +1,7 @@
+# Comments start with a '#'
+
+<MATH_EXPRESSION>
+<FLOAT>
+<NUMBER>
+<STRING>
+<HEX_NUMBER>
