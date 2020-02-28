@@ -2,7 +2,7 @@
 <HEX_NUMBER>        ::= <HEX> <HEX_NUMBER> | <HEX>
 <HEX>               ::= <DIGITS> | A | B | C | D | E | F
 
-
+<ALPHANUM>          ::= <CHARACTERS> <ALPHANUM> | <NUMBER> <ALPHANUM> | <CHARACTERS> | <NUMBER>
 <STRING>            ::= <CHARACTERS> <STRING>
                         | <CHARACTERS>
 <LC_STRING>         ::= <LC_CHARACTERS> <LC_STRING> | <LC_CHARACTERS>

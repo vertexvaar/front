@@ -28,8 +28,7 @@ class FrontCommand extends Command
         $question = new Question('> ');
         while (!in_array($answer = $helper->ask($input, $output, $question), ['quit', 'exit'])) {
             $parser = new Parser();
-            $parsed = $parser->parse($answer ?? '');
-            $output->writeln('Parsed: ' . $parsed);
+            $parser->parse($answer ?? '');
         }
     }
 
