@@ -1,8 +1,11 @@
 <?php
+
 declare(strict_types=1);
+
 namespace VerteXVaaR\Front\Parsing;
 
 use Closure;
+
 use function array_filter;
 use function array_map;
 use function array_merge;
@@ -21,6 +24,7 @@ use function reset;
 use function strlen;
 use function strpos;
 use function trim;
+
 use const PHP_EOL;
 
 class BnfParser

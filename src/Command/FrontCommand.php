@@ -1,5 +1,7 @@
 <?php
+
 declare(strict_types=1);
+
 namespace VerteXVaaR\Front\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -8,8 +10,8 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Question\Question;
 use VerteXVaaR\Front\Parsing\Parser;
+
 use function in_array;
-use function var_dump;
 
 class FrontCommand extends Command
 {
